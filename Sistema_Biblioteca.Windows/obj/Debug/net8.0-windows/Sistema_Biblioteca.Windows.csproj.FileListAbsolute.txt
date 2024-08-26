@@ -14,3 +14,4 @@ C:\Users\gabri\OneDrive\Documents\AEDB\linguagem de progrmação\projetos\Prjt_a
 C:\Users\gabri\OneDrive\Documents\AEDB\linguagem de progrmação\projetos\Prjt_autor_e_genero(2)\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.pdb
 C:\Users\gabri\OneDrive\Documents\AEDB\linguagem de progrmação\projetos\Prjt_autor_e_genero(2)\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.genruntimeconfig.cache
 C:\Users\gabri\OneDrive\Documents\AEDB\linguagem de progrmação\projetos\Prjt_autor_e_genero(2)\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\ref\Sistema_Biblioteca.Windows.dll
+C:\Users\gabri\OneDrive\Documents\AEDB\linguagem de progrmação\projetos\Prjt_autor_e_genero(2)\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.sourcelink.json
