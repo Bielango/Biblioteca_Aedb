@@ -1,3 +1,5 @@
+using Sistema_Biblioteca.Windows.Mock;
+
 namespace Sistema_Biblioteca.Windows
 {
     internal static class Program
@@ -11,6 +13,9 @@ namespace Sistema_Biblioteca.Windows
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+
+            MockGenero.CarregaGenero();
+            MockAutor.CarregaAutor();
             Application.Run(new FrmMenu());
         }
     }

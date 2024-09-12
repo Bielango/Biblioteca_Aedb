@@ -15,3 +15,86 @@ C:\Users\gabri\OneDrive\Documents\AEDB\linguagem de progrmação\projetos\Prjt_a
 C:\Users\gabri\OneDrive\Documents\AEDB\linguagem de progrmação\projetos\Prjt_autor_e_genero(2)\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.genruntimeconfig.cache
 C:\Users\gabri\OneDrive\Documents\AEDB\linguagem de progrmação\projetos\Prjt_autor_e_genero(2)\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\ref\Sistema_Biblioteca.Windows.dll
 C:\Users\gabri\OneDrive\Documents\AEDB\linguagem de progrmação\projetos\Prjt_autor_e_genero(2)\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.sourcelink.json
+C:\Users\gabri\OneDrive\Documents\AEDB\linguagem de progrmação\projetos\Prjt_autor_e_genero(2)\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.FrmGenero.resources
+C:\Users\gabri\OneDrive\Documents\AEDB\linguagem de progrmação\projetos\Prjt_autor_e_genero(2)\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.Properties.Resources.resources
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Sistema_Biblioteca.Windows.exe
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Sistema_Biblioteca.Windows.deps.json
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Sistema_Biblioteca.Windows.runtimeconfig.json
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Sistema_Biblioteca.Windows.dll
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Sistema_Biblioteca.Windows.pdb
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.FrmAutor.resources
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.FrmGenero.resources
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.FrmMenu.resources
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.Properties.Resources.resources
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.csproj.GenerateResource.cache
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.AssemblyInfoInputs.cache
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.AssemblyInfo.cs
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.csproj.CoreCompileInputs.cache
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.sourcelink.json
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.dll
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\refint\Sistema_Biblioteca.Windows.dll
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.pdb
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.genruntimeconfig.cache
+C:\Users\AEDB\Desktop\Nova pasta\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\ref\Sistema_Biblioteca.Windows.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Sistema_Biblioteca.Windows.exe
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Sistema_Biblioteca.Windows.deps.json
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Sistema_Biblioteca.Windows.runtimeconfig.json
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Sistema_Biblioteca.Windows.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Sistema_Biblioteca.Windows.pdb
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.FrmAutor.resources
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.FrmGenero.resources
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.FrmMenu.resources
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.Properties.Resources.resources
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.csproj.GenerateResource.cache
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.AssemblyInfoInputs.cache
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.AssemblyInfo.cs
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.csproj.CoreCompileInputs.cache
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.sourcelink.json
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\refint\Sistema_Biblioteca.Windows.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.pdb
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.genruntimeconfig.cache
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\ref\Sistema_Biblioteca.Windows.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Azure.Core.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Azure.Identity.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\System.ClientModel.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\System.Configuration.ConfigurationManager.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\System.Memory.Data.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\System.Security.Cryptography.ProtectedData.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.csproj.AssemblyReference.cache
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.FrmEditora.resources
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação C# facul\Sistema_Biblioteca\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_.39E855A3.Up2Date

@@ -17,5 +17,43 @@ namespace Sistema_Biblioteca.Windows
             this.Close();
             Application.Exit();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void MnuGenero_Click(object sender, EventArgs e)
+        {
+            FrmGenero oFrm = new FrmGenero(MnuGenero, MnSGenero);
+            oFrm.MdiParent = this;
+            MnuGenero.Enabled = false;
+            MnSGenero.Enabled = false;
+            oFrm.Show();
+        }
+        private void MnuAutor_Click(object sender, EventArgs e)
+        {
+            FrmAutor oFrm = new FrmAutor(MnuAutor, MnSAutor);
+            oFrm.MdiParent = this;
+            MnuAutor.Enabled = false;
+            MnSAutor.Enabled = false;
+            oFrm.Show();
+        }
+
+        private void MnSGenero_Click(object sender, EventArgs e)
+        {
+            MnuGenero_Click(sender, e);
+        }
+        private void MnSAutor_Click(object sender, EventArgs e)
+        {
+            MnuAutor_Click(sender, e);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
