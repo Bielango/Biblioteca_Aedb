@@ -39,6 +39,7 @@
             MnSAutor = new ToolStripMenuItem();
             statusStrip1 = new StatusStrip();
             LblDisplay = new ToolStripStatusLabel();
+            idiomaToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             MnuSuspenso.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -58,7 +59,7 @@
             // 
             // toolStripMenuItem1
             // 
-            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { MnuGenero, MnuAutor, MnuSair });
+            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { MnuGenero, MnuAutor, idiomaToolStripMenuItem, MnuSair });
             toolStripMenuItem1.Name = "toolStripMenuItem1";
             toolStripMenuItem1.Size = new Size(71, 20);
             toolStripMenuItem1.Text = "&Cadastros";
@@ -67,21 +68,21 @@
             // MnuGenero
             // 
             MnuGenero.Name = "MnuGenero";
-            MnuGenero.Size = new Size(112, 22);
+            MnuGenero.Size = new Size(180, 22);
             MnuGenero.Text = "&Gênero";
             MnuGenero.Click += MnuGenero_Click;
             // 
             // MnuAutor
             // 
             MnuAutor.Name = "MnuAutor";
-            MnuAutor.Size = new Size(112, 22);
+            MnuAutor.Size = new Size(180, 22);
             MnuAutor.Text = "&Autor";
             MnuAutor.Click += MnuAutor_Click;
             // 
             // MnuSair
             // 
             MnuSair.Name = "MnuSair";
-            MnuSair.Size = new Size(112, 22);
+            MnuSair.Size = new Size(180, 22);
             MnuSair.Text = "Sai&r";
             MnuSair.Click += sairToolStripMenuItem_Click;
             // 
@@ -126,6 +127,12 @@
             LblDisplay.Name = "LblDisplay";
             LblDisplay.Size = new Size(300, 19);
             // 
+            // idiomaToolStripMenuItem
+            // 
+            idiomaToolStripMenuItem.Name = "idiomaToolStripMenuItem";
+            idiomaToolStripMenuItem.Size = new Size(180, 22);
+            idiomaToolStripMenuItem.Text = "&Idioma";
+            // 
             // FrmMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -163,5 +170,6 @@
         private ToolStripMenuItem autorToolStripMenuItem;
         public ToolStripMenuItem MnuAutor;
         public ToolStripMenuItem MnSAutor;
+        private ToolStripMenuItem idiomaToolStripMenuItem;
     }
 }
