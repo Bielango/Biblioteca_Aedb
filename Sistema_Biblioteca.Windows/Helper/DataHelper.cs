@@ -17,6 +17,7 @@ namespace Sistema_Biblioteca.Windows.Helper
         public static List<Genero> ListaGenero { get; set; }
         //a fazer
         public static List<Autor> ListaAutor { get; set; }
+        //public static List<Editora> ListaEditora { get; set; }
 
         //conexao com banco de dados
         public static SqlConnection Conexao()
