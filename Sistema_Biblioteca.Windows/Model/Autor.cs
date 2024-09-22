@@ -113,7 +113,13 @@ namespace Sistema_Biblioteca.Windows.Model
 
         public void Excluir()
         {
-            DataHelper.ListaAutor.Remove(this);
+            //DataHelper.ListaAutor.Remove(this);
+            using (var oCn = DataHelper.Conexao())
+            {
+                string SQL = $"delete from Autor where id={this.id}";
+                SqlCommand comando = new SqlCommand(SQL, oCn);
+                comando.ExecuteNonQuery();
+            }
         }
     }
 }

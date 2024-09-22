@@ -42,7 +42,7 @@ namespace Sistema_Biblioteca.Windows
 
         private void MnuIdioma_Click(object sender, EventArgs e)
         {
-            FrmAutor oFrm = new FrmAutor(MnuIdioma, MnSIdioma);
+            FrmIdioma oFrm = new FrmIdioma(MnuIdioma, MnSIdioma);
             oFrm.MdiParent = this;
             MnuIdioma.Enabled = false;
             MnSIdioma.Enabled = false;
