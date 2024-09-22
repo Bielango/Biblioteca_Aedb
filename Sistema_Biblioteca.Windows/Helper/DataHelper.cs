@@ -19,6 +19,8 @@ namespace Sistema_Biblioteca.Windows.Helper
         public static List<Autor> ListaAutor { get; set; }
         //public static List<Editora> ListaEditora { get; set; }
 
+        public static List<Idioma> ListaIdioma { get; set; }
+
         //conexao com banco de dados
         public static SqlConnection Conexao()
         {
