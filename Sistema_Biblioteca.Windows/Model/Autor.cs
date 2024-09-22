@@ -1,4 +1,5 @@
-﻿using Sistema_Biblioteca.Windows.Helper;
+﻿using Microsoft.Data.SqlClient;
+using Sistema_Biblioteca.Windows.Helper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,50 +22,93 @@ namespace Sistema_Biblioteca.Windows.Model
 
         public static List<Autor> ListarTodos()
         {
-            return (from p in DataHelper.ListaAutor select p).ToList();
+            //return (from p in DataHelper.ListaAutor select p).ToList();
+            using (var oCn = DataHelper.Conexao())
+            {
+                List<Autor> Retorno = new List<Autor>();
+                string SQL = $"select id, Nome from Autor";
+                SqlCommand comando = new SqlCommand(SQL, oCn);
+                SqlDataReader oDr = comando.ExecuteReader();
+                while (oDr.Read())
+                {
+                    Autor oAutor = new Autor();
+                    oAutor.id = oDr.GetInt32(oDr.GetOrdinal("id"));
+                    oAutor.Nome = oDr.GetString(oDr.GetOrdinal("Nome"));
+                    Retorno.Add(oAutor);
+                }
+                oDr.Close();
+                return Retorno;
+            }
         }
 
         public static Autor? Seleciona(int Codigo)
         {
-            return (from p in DataHelper.ListaAutor where p.id == Codigo select p).FirstOrDefault();
+            //return (from p in DataHelper.ListaAutor where p.id == Codigo select p).FirstOrDefault();
+            using (var oCn = DataHelper.Conexao())
+            {
+                Autor? Retorno = null;
+                string SQL = $"select id, Nome from Autor where id={Codigo}";
+                SqlCommand comando = new SqlCommand(SQL, oCn);
+                SqlDataReader oDr = comando.ExecuteReader();
+                while (oDr.Read())
+                {
+                    Retorno = new Autor();
+                    Retorno.id = oDr.GetInt32(oDr.GetOrdinal("id"));
+                    Retorno.Nome = oDr.GetString(oDr.GetOrdinal("Nome"));
+                }
+                oDr.Close();
+                return Retorno;
+            }
         }
 
         public static void IncluirAutorStatico(Autor oAutor)
         {
-            Autor? oAutorSelecionado = Autor.Seleciona(oAutor.id);
-            if (oAutorSelecionado != null)
-            {
-                throw new Exception($"O código informado está sendo utilizado no autor {oAutorSelecionado.Nome}.");
-            }
-            else
-            {
-                DataHelper.ListaAutor.Add(oAutor);
-            }
+            //Autor? oAutorSelecionado = Autor.Seleciona(oAutor.id);
+            //if (oAutorSelecionado != null)
+            //{
+            //    throw new Exception($"O código informado está sendo utilizado no autor {oAutorSelecionado.Nome}.");
+            //}
+            //else
+            //{
+            //    DataHelper.ListaAutor.Add(oAutor);
+            //}
         }
 
         public void Incluir()
         {
-            Autor? oAutorSelecionado = Autor.Seleciona(this.id);
-            if (oAutorSelecionado != null)
+            using (var oCn = DataHelper.Conexao())
             {
-                throw new Exception($"O código informado está sendo utilizado no autor {oAutorSelecionado.Nome}.");
+                string SQL = $"insert into Autor values('{this.Nome.Replace("'","")}')";
+                SqlCommand comando = new SqlCommand(SQL, oCn);
+                comando.ExecuteNonQuery();
             }
-            else
-            {
-                DataHelper.ListaAutor.Add(this);
+                //Autor? oAutorSelecionado = Autor.Seleciona(this.id);
+                //if (oAutorSelecionado != null)
+                //{
+                //    throw new Exception($"O código informado está sendo utilizado no autor {oAutorSelecionado.Nome}.");
+                //}
+                //else
+                //{
+                //    DataHelper.ListaAutor.Add(this);
+                //}
             }
-        }
         public static void Alterar(Autor oAutor)
         {
-            Autor? AutorColecao = Seleciona(oAutor.id);
-            if (AutorColecao == null)
+            using (var oCn = DataHelper.Conexao())
             {
-                throw new Exception($"O objeto informado não existe mais no contexto.");
+                string SQL = $"update Autor set Nome='{oAutor.Nome.Replace("'", "")}' where id={oAutor.id}";
+                SqlCommand comando = new SqlCommand(SQL, oCn);
+                comando.ExecuteNonQuery();
             }
-            else
-            {
-                AutorColecao.Nome = oAutor.Nome;
-            }
+            //Autor? AutorColecao = Seleciona(oAutor.id);
+            //if (AutorColecao == null)
+            //{
+            //    throw new Exception($"O objeto informado não existe mais no contexto.");
+            //}
+            //else
+            //{
+            //    AutorColecao.Nome = oAutor.Nome;
+            //}
         }
 
         public void Excluir()

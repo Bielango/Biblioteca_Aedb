@@ -59,24 +59,25 @@ namespace Sistema_Biblioteca.Windows
         private bool ValidaControles()
         {
             int Codigo;
-            if (TxtCodigo.Text.Trim() == "")
-            {
-                MessageBox.Show("O campo código é de preenchimento obrigatório.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                TxtCodigo.Focus();
-                return false;
-            }
-            else if (TxtNome.Text.Trim() == "")
+            //if (TxtCodigo.Text.Trim() == "")
+            //{
+            //    MessageBox.Show("O campo código é de preenchimento obrigatório.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    TxtCodigo.Focus();
+            //    return false;
+            //}
+            //else 
+            if (TxtNome.Text.Trim() == "")
             {
                 MessageBox.Show("O campo nome é de preenchimento obrigatório.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TxtNome.Focus();
                 return false;
             }
-            else if (int.TryParse(TxtCodigo.Text, out Codigo) == false)
-            {
-                MessageBox.Show("O campo código não é numérico.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                TxtCodigo.Focus();
-                return false;
-            }
+            //else if (int.TryParse(TxtCodigo.Text, out Codigo) == false)
+            //{
+            //    MessageBox.Show("O campo código não é numérico.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    TxtCodigo.Focus();
+            //    return false;
+            //}
 
             return true;
         }
@@ -96,7 +97,7 @@ namespace Sistema_Biblioteca.Windows
 
                     Autor oAutor = new Autor
                     {
-                        id = int.Parse(TxtCodigo.Text),
+                        //id = int.Parse(TxtCodigo.Text),
                         Nome = TxtNome.Text
                     };
 
