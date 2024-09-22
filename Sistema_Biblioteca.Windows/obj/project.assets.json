@@ -1687,23 +1687,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bielt\\.nuget\\packages\\": {},
+    "C:\\Users\\Golia\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação C# facul\\Sistema_Biblioteca\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
+      "projectUniqueName": "C:\\Users\\Golia\\Documents\\Git\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
       "projectName": "Sistema_Biblioteca.Windows",
-      "projectPath": "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação C# facul\\Sistema_Biblioteca\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
-      "packagesPath": "C:\\Users\\bielt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação C# facul\\Sistema_Biblioteca\\Sistema_Biblioteca.Windows\\obj\\",
+      "projectPath": "C:\\Users\\Golia\\Documents\\Git\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
+      "packagesPath": "C:\\Users\\Golia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Golia\\Documents\\Git\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\bielt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Golia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1760,7 +1760,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
