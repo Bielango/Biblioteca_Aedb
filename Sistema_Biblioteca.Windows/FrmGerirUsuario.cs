@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Sistema_Biblioteca.Windows
 {
-    public partial class FrmIdioma : Form
+    public partial class FrmGerirUsuario : Form
     {
         ToolStripMenuItem _mnu;
         ToolStripMenuItem _mnu2;
 
         private bool Incluir = true;
 
-        public FrmIdioma(ToolStripMenuItem Mnu1, ToolStripMenuItem Mnu2)
+        public FrmGerirUsuario(ToolStripMenuItem Mnu1, ToolStripMenuItem Mnu2)
         {
             InitializeComponent();
             _mnu = Mnu1;
@@ -27,23 +27,23 @@ namespace Sistema_Biblioteca.Windows
         private void CarregaGrid()
         {
             GrdItens.AutoGenerateColumns = false;
-            GrdItens.DataSource = Idioma.ListarTodos();
+            GrdItens.DataSource = GerirUsuario.ListarTodos();
         }
 
-        private void FrmIdioma_Load(object sender, EventArgs e)
+        private void FrmGerirUsuario_Load(object sender, EventArgs e)
         {
             CarregaGrid();
         }
 
-        private void FrmIdioma_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmGerirUsuario_FormClosed(object sender, FormClosedEventArgs e)
         {
             _mnu.Enabled = true;
             _mnu2.Enabled = true;
         }
 
-        private void FrmIdioma_Activated(object sender, EventArgs e)
+        private void FrmGerirUsuario_Activated(object sender, EventArgs e)
         {
-            ((FrmMenu)this.MdiParent).LblDisplay.Text = "Cadastro de Idioma";
+            ((FrmMenu)this.MdiParent).LblDisplay.Text = "Cadastro de GerirUsuario";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -90,7 +90,7 @@ namespace Sistema_Biblioteca.Windows
                 if (Incluir)
                 {
 
-                    Idioma oIdioma = new Idioma
+                    GerirUsuario oGerirUsuario = new GerirUsuario
                     {
                         //id = int.Parse(TxtCodigo.Text),
                         Nome = TxtNome.Text
@@ -98,20 +98,20 @@ namespace Sistema_Biblioteca.Windows
 
                     try
                     {
-                        oIdioma.Incluir();
+                        oGerirUsuario.Incluir();
                         CarregaGrid();
                         LimpaControles();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Um erro ocorreu ao incluir o idioma: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Um erro ocorreu ao incluir o gênero: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         TxtCodigo.Focus();
                     }
                 }
                 else
                 {
 
-                    Idioma oIdioma = new Idioma
+                    GerirUsuario oGerirUsuario = new GerirUsuario
                     {
                         id = int.Parse(TxtCodigo.Text),
                         Nome = TxtNome.Text
@@ -119,7 +119,7 @@ namespace Sistema_Biblioteca.Windows
                     try
                     {
 
-                        Idioma.Alterar(oIdioma);
+                        GerirUsuario.Alterar(oGerirUsuario);
                         CarregaGrid();
                         LimpaControles();
                         Incluir = true;
@@ -127,7 +127,7 @@ namespace Sistema_Biblioteca.Windows
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Um erro ocorreu ao alterar o idioma: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Um erro ocorreu ao alterar o GerirUsuario: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         TxtCodigo.Focus();
                     }
                 }
@@ -154,7 +154,7 @@ namespace Sistema_Biblioteca.Windows
             if (GrdItens.Rows[e.RowIndex].DataBoundItem != null)
             {
 
-                Idioma objSelecionado = (Idioma)GrdItens.Rows[e.RowIndex].DataBoundItem;
+                GerirUsuario objSelecionado = (GerirUsuario)GrdItens.Rows[e.RowIndex].DataBoundItem;
 
                 if (GrdItens.Columns[e.ColumnIndex].Name == "BtnAlterar")
                 {
