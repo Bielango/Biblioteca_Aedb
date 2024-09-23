@@ -13,11 +13,18 @@ namespace Sistema_Biblioteca.Windows.Helper
 {
     public static class DataHelper
     {
-        public static List<Autor> ListaAutor { get; set; }
+        //pronto
         public static List<Genero> ListaGenero { get; set; }
+        //a fazer
+        public static List<Autor> ListaAutor { get; set; }
+        //public static List<Editora> ListaEditora { get; set; }
+
+        public static List<Idioma> ListaIdioma { get; set; }
+
+        //conexao com banco de dados
         public static SqlConnection Conexao()
         {
-            string strconnection = "Data Source = DESKTOP-8TJAN6U; Initial Catalog=biblioteca - classes;Integrated Security = True; Connect Timeout = 30; Encrypt = True; TrustServerCertificate = true;";
+            string strconnection = ConectarSql.conectar;
             SqlConnection oCn = new SqlConnection(strconnection);
             oCn.Open();
             return oCn;

@@ -40,6 +40,16 @@ namespace Sistema_Biblioteca.Windows
             oFrm.Show();
         }
 
+        private void MnuIdioma_Click(object sender, EventArgs e)
+        {
+            FrmIdioma oFrm = new FrmIdioma(MnuIdioma, MnSIdioma);
+            oFrm.MdiParent = this;
+            MnuIdioma.Enabled = false;
+            MnSIdioma.Enabled = false;
+            oFrm.Show();
+        }
+
+
         private void MnSGenero_Click(object sender, EventArgs e)
         {
             MnuGenero_Click(sender, e);
@@ -48,12 +58,15 @@ namespace Sistema_Biblioteca.Windows
         {
             MnuAutor_Click(sender, e);
         }
-
+        
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
 
-
+        private void MnSIdioma_Click(object sender, EventArgs e)
+        {
+            MnuIdioma_Click(sender, e);
+        }
     }
 }

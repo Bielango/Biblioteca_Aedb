@@ -16,6 +16,7 @@ namespace Sistema_Biblioteca.Windows
 
             MockGenero.CarregaGenero();
             MockAutor.CarregaAutor();
+            MockIdioma.CarregaIdioma();
             Application.Run(new FrmMenu());
         }
     }

@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Sistema_Biblioteca.Windows
 {
-    public partial class FrmAutor : Form
+    public partial class FrmIdioma : Form
     {
         ToolStripMenuItem _mnu;
         ToolStripMenuItem _mnu2;
 
         private bool Incluir = true;
 
-        public FrmAutor(ToolStripMenuItem Mnu1, ToolStripMenuItem Mnu2)
+        public FrmIdioma(ToolStripMenuItem Mnu1, ToolStripMenuItem Mnu2)
         {
             InitializeComponent();
             _mnu = Mnu1;
@@ -27,28 +27,23 @@ namespace Sistema_Biblioteca.Windows
         private void CarregaGrid()
         {
             GrdItens.AutoGenerateColumns = false;
-            GrdItens.DataSource = Autor.ListarTodos();
+            GrdItens.DataSource = Idioma.ListarTodos();
         }
 
-        private void FrmAutor_Load(object sender, EventArgs e)
+        private void FrmIdioma_Load(object sender, EventArgs e)
         {
             CarregaGrid();
         }
 
-        private void FrmAutor_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmIdioma_FormClosed(object sender, FormClosedEventArgs e)
         {
             _mnu.Enabled = true;
             _mnu2.Enabled = true;
         }
 
-        private void FrmAutor_Activated(object sender, EventArgs e)
+        private void FrmIdioma_Activated(object sender, EventArgs e)
         {
-            ((FrmMenu)this.MdiParent).LblDisplay.Text = "Cadastro de Autor";
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            ((FrmMenu)this.MdiParent).LblDisplay.Text = "Cadastro de Idioma";
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -95,7 +90,7 @@ namespace Sistema_Biblioteca.Windows
                 if (Incluir)
                 {
 
-                    Autor oAutor = new Autor
+                    Idioma oIdioma = new Idioma
                     {
                         //id = int.Parse(TxtCodigo.Text),
                         Nome = TxtNome.Text
@@ -103,28 +98,28 @@ namespace Sistema_Biblioteca.Windows
 
                     try
                     {
-                        oAutor.Incluir();
+                        oIdioma.Incluir();
                         CarregaGrid();
                         LimpaControles();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Um erro ocorreu ao incluir o Autor: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Um erro ocorreu ao incluir o gênero: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         TxtCodigo.Focus();
                     }
                 }
                 else
                 {
-                    
-                    Autor oAutor = new Autor
+
+                    Idioma oIdioma = new Idioma
                     {
                         id = int.Parse(TxtCodigo.Text),
                         Nome = TxtNome.Text
                     };
                     try
                     {
-                    
-                        Autor.Alterar(oAutor);
+
+                        Idioma.Alterar(oIdioma);
                         CarregaGrid();
                         LimpaControles();
                         Incluir = true;
@@ -132,7 +127,7 @@ namespace Sistema_Biblioteca.Windows
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Um erro ocorreu ao alterar o Autor: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Um erro ocorreu ao alterar o idioma: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         TxtCodigo.Focus();
                     }
                 }
@@ -159,12 +154,10 @@ namespace Sistema_Biblioteca.Windows
             if (GrdItens.Rows[e.RowIndex].DataBoundItem != null)
             {
 
-                Autor objSelecionado = (Autor)GrdItens.Rows[e.RowIndex].DataBoundItem;
+                Idioma objSelecionado = (Idioma)GrdItens.Rows[e.RowIndex].DataBoundItem;
 
- 
                 if (GrdItens.Columns[e.ColumnIndex].Name == "BtnAlterar")
                 {
-
                     TxtCodigo.Text = objSelecionado.id.ToString();
                     TxtNome.Text = objSelecionado.Nome;
                     TxtCodigo.Enabled = false;
@@ -173,14 +166,18 @@ namespace Sistema_Biblioteca.Windows
                 }
                 else if (GrdItens.Columns[e.ColumnIndex].Name == "BtnExcluir")
                 {
-
-                    if(MessageBox.Show("Confirme a exclusão.",ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Confirme a exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         objSelecionado.Excluir();
                         CarregaGrid();
                     }
                 }
             }
+        }
+
+        private void GrdItens_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
