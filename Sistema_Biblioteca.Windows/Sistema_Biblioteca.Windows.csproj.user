@@ -7,9 +7,6 @@
     <Compile Update="FrmGenero.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmGerirUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FrmIdioma.cs">
       <SubType>Form</SubType>
     </Compile>
