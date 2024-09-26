@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Biblioteca.Windows.Model
 {
-    public class Genero
+    public class Editora
     {
         //public int Codigo {  get; set; }
         private int _id;
@@ -21,21 +21,21 @@ namespace Sistema_Biblioteca.Windows.Model
         }
         public string Nome { get => _Nome; set => _Nome = value.Replace("'",""); }
 
-        public static List<Genero> ListarTodos()
+        public static List<Editora> ListarTodos()
         {
-            //return (from p in DataHelper.ListaGenero select p).ToList();
+            //return (from p in DataHelper.ListaEditora select p).ToList();
             using (var oCn = DataHelper.Conexao())
             {
-                List<Genero> Retorno = new List<Genero>();
-                string SQL = $"select id, Nome from Genero";
+                List<Editora> Retorno = new List<Editora>();
+                string SQL = $"select id, Nome from Editora";
                 SqlCommand comando = new SqlCommand(SQL, oCn);
                 SqlDataReader oDr = comando.ExecuteReader();
                 while(oDr.Read())
                 {
-                    Genero oGenero = new Genero();
-                    oGenero.id = oDr.GetInt32(oDr.GetOrdinal("id"));
-                    oGenero.Nome = oDr.GetString(oDr.GetOrdinal("Nome"));
-                    Retorno.Add(oGenero);
+                    Editora oEditora = new Editora();
+                    oEditora.id = oDr.GetInt32(oDr.GetOrdinal("id"));
+                    oEditora.Nome = oDr.GetString(oDr.GetOrdinal("Nome"));
+                    Retorno.Add(oEditora);
                 }
                 oDr.Close();
                 return Retorno;
@@ -45,37 +45,37 @@ namespace Sistema_Biblioteca.Windows.Model
             //oCn.Close();
         }
 
-        public static Genero? Seleciona(int Codigo)
+        public static Editora? Seleciona(int Codigo)
         {
             using (var oCn = DataHelper.Conexao())
             {
-                Genero? Retorno = null;
-                string SQL = $"select id, Nome from Genero where id={Codigo}";
+                Editora? Retorno = null;
+                string SQL = $"select id, Nome from Editora where id={Codigo}";
                 SqlCommand comando = new SqlCommand(SQL, oCn);
                 SqlDataReader oDr = comando.ExecuteReader();
                 while (oDr.Read())
                 {
-                    Retorno = new Genero();
+                    Retorno = new Editora();
                     Retorno.id = oDr.GetInt32(oDr.GetOrdinal("id"));
                     Retorno.Nome = oDr.GetString(oDr.GetOrdinal("Nome"));
                 }
                 oDr.Close();
                 return Retorno;
             }
-            //return (from p in DataHelper.ListaGenero where p.id == Codigo select p).FirstOrDefault();
+            //return (from p in DataHelper.ListaEditora where p.id == Codigo select p).FirstOrDefault();
         }
 
-        public static void IncluirGeneroStatico(Genero oGenero)
+        public static void IncluirEditoraStatico(Editora oEditora)
         {
 
-            //Genero? oGeneroSelecionado = Genero.Seleciona(oGenero.id);
-            //if(oGeneroSelecionado != null)
+            //Editora? oEditoraSelecionado = Editora.Seleciona(oEditora.id);
+            //if(oEditoraSelecionado != null)
             //{
-            //    throw new Exception($"O código informado está sendo utilizado no gênero {oGeneroSelecionado.Nome}.");
+            //    throw new Exception($"O código informado está sendo utilizado no editora {oEditoraSelecionado.Nome}.");
             //}
             //else
             //{ 
-            //    DataHelper.ListaGenero.Add(oGenero);
+            //    DataHelper.ListaEditora.Add(oEditora);
             //}
         }
 
@@ -83,46 +83,46 @@ namespace Sistema_Biblioteca.Windows.Model
         {
             using (var oCn = DataHelper.Conexao())
             {
-                string SQL = $"insert into Genero values('{this.Nome.Replace("'","")}')";
+                string SQL = $"insert into Editora values('{this.Nome.Replace("'","")}')";
                 SqlCommand comando = new SqlCommand(SQL, oCn);
                 comando.ExecuteNonQuery();
             }
-            //Genero? oGeneroSelecionado = Genero.Seleciona(this.id);
-            //if (oGeneroSelecionado != null)
+            //Editora? oEditoraSelecionado = Editora.Seleciona(this.id);
+            //if (oEditoraSelecionado != null)
             //{
-            //    throw new Exception($"O código informado está sendo utilizado no gênero {oGeneroSelecionado.Nome}.");
+            //    throw new Exception($"O código informado está sendo utilizado no editora {oEditoraSelecionado.Nome}.");
             //}
             //else
             //{
-            //    DataHelper.ListaGenero.Add(this);
+            //    DataHelper.ListaEditora.Add(this);
             //}
         }
-        public static void Alterar(Genero oGenero)
+        public static void Alterar(Editora oEditora)
         {
             using (var oCn = DataHelper.Conexao())
             {
-                string SQL = $"update Genero set Nome='{oGenero.Nome.Replace("'", "")}' where id={oGenero.id}";
+                string SQL = $"update Editora set Nome='{oEditora.Nome.Replace("'", "")}' where id={oEditora.id}";
                 SqlCommand comando = new SqlCommand(SQL, oCn);
                 comando.ExecuteNonQuery();
             }
-            //Genero? GeneroColecao = Seleciona(oGenero.id);
-            //if (GeneroColecao == null)
+            //Editora? EditoraColecao = Seleciona(oEditora.id);
+            //if (EditoraColecao == null)
             //{
             //    throw new Exception($"O objeto informado não existe mais no contexto.");
             //}
             //else
             //{
-            //    //GeneroColecao.id = oGenero.id;
-            //    GeneroColecao.Nome = oGenero.Nome;
+            //    //EditoraColecao.id = oEditora.id;
+            //    EditoraColecao.Nome = oEditora.Nome;
             //}
         }
 
         public void Excluir()
         {
-            //DataHelper.ListaGenero.Remove(this);
+            //DataHelper.ListaEditora.Remove(this);
             using (var oCn = DataHelper.Conexao())
             {
-                string SQL = $"delete from Genero where id={this.id}";
+                string SQL = $"delete from Editora where id={this.id}";
                 SqlCommand comando = new SqlCommand(SQL, oCn);
                 comando.ExecuteNonQuery();
             }

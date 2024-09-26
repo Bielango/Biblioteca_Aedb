@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Sistema_Biblioteca.Windows
 {
-    public partial class FrmGenero : Form
+    public partial class FrmEditora : Form
     {
         ToolStripMenuItem _mnu;
         ToolStripMenuItem _mnu2;
 
         private bool Incluir = true;
 
-        public FrmGenero(ToolStripMenuItem Mnu1, ToolStripMenuItem Mnu2)
+        public FrmEditora(ToolStripMenuItem Mnu1, ToolStripMenuItem Mnu2)
         {
             InitializeComponent();
             _mnu = Mnu1;
@@ -27,23 +27,23 @@ namespace Sistema_Biblioteca.Windows
         private void CarregaGrid()
         {
             GrdItens.AutoGenerateColumns = false;
-            GrdItens.DataSource = Genero.ListarTodos();
+            GrdItens.DataSource = Editora.ListarTodos();
         }
 
-        private void FrmGenero_Load(object sender, EventArgs e)
+        private void FrmEditora_Load(object sender, EventArgs e)
         {
             CarregaGrid();
         }
 
-        private void FrmGenero_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmEditora_FormClosed(object sender, FormClosedEventArgs e)
         {
             _mnu.Enabled = true;
             _mnu2.Enabled = true;
         }
 
-        private void FrmGenero_Activated(object sender, EventArgs e)
+        private void FrmEditora_Activated(object sender, EventArgs e)
         {
-            ((FrmMenu)this.MdiParent).LblDisplay.Text = "Cadastro de Gêneros";
+            ((FrmMenu)this.MdiParent).LblDisplay.Text = "Cadastro de Editoras";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace Sistema_Biblioteca.Windows
                 if (Incluir)
                 {
 
-                    Genero oGenero = new Genero
+                    Editora oEditora = new Editora
                     {
                         //id = int.Parse(TxtCodigo.Text),
                         Nome = TxtNome.Text
@@ -103,20 +103,20 @@ namespace Sistema_Biblioteca.Windows
 
                     try
                     {
-                        oGenero.Incluir();
+                        oEditora.Incluir();
                         CarregaGrid();
                         LimpaControles();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Um erro ocorreu ao incluir o gênero: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Um erro ocorreu ao incluir a Editora: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         TxtCodigo.Focus();
                     }
                 }
                 else
                 {
                     
-                    Genero oGenero = new Genero
+                    Editora oEditora = new Editora
                     {
                         id = int.Parse(TxtCodigo.Text),
                         Nome = TxtNome.Text
@@ -124,7 +124,7 @@ namespace Sistema_Biblioteca.Windows
                     try
                     {
                     
-                        Genero.Alterar(oGenero);
+                        Editora.Alterar(oEditora);
                         CarregaGrid();
                         LimpaControles();
                         Incluir = true;
@@ -132,7 +132,7 @@ namespace Sistema_Biblioteca.Windows
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Um erro ocorreu ao alterar o gênero: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Um erro ocorreu ao alterar a Editora: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         TxtCodigo.Focus();
                     }
                 }
@@ -159,7 +159,7 @@ namespace Sistema_Biblioteca.Windows
             if (GrdItens.Rows[e.RowIndex].DataBoundItem != null)
             {
 
-                Genero objSelecionado = (Genero)GrdItens.Rows[e.RowIndex].DataBoundItem;
+                Editora objSelecionado = (Editora)GrdItens.Rows[e.RowIndex].DataBoundItem;
 
                 if (GrdItens.Columns[e.ColumnIndex].Name == "BtnAlterar")
                 {

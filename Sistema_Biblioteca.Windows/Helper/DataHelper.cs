@@ -18,7 +18,7 @@ namespace Sistema_Biblioteca.Windows.Helper
         //a fazer
         public static List<Autor> ListaAutor { get; set; }
 
-        //public static List<Editora> ListaEditora { get; set; }
+        public static List<Editora> ListaEditora { get; set; }
 
         public static List<Idioma> ListaIdioma { get; set; }
 

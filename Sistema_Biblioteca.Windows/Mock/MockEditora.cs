@@ -9,24 +9,24 @@ using Sistema_Biblioteca.Windows.Model;
 
 namespace Sistema_Biblioteca.Windows.Mock
 {
-    public class MockGenero
+    public class MockEditora
     {
-        public static void CarregaGenero()
+        public static void CarregaEditora()
         {
-            List<Genero> oLista = new List<Genero>();
+            List<Editora> oLista = new List<Editora>();
 
             for (int i = 1; i < 11; i++)
             {
-                Genero oGenero = new Genero
+                Editora oEditora = new Editora
                 {
                     id = i,
-                    Nome = $"Gênero {i}"                    
+                    Nome = $"Editora {i}"                    
                     
                 };
-                oLista.Add(oGenero);
+                oLista.Add(oEditora);
             }
 
-            DataHelper.ListaGenero = oLista;
+            DataHelper.ListaEditora = oLista;
         }
     }
 }
