@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Sistema_Biblioteca.Windows.Helper
 {
-    internal class ConectarSqlExemplo
+    internal class ConectarSql
     {
-        static string nomeDesktop = "Cole_aqui_nome_do_pc";
-        static string nomeBancoDados = "Cole_aqui_nome_do_banco_de_dados";
+        static string nomeDesktop = "DESKTOP-8TJAN6U";
+        static string nomeBancoDados = "biblioteca - classes";
 
         public static string conectar = $"Data Source = {nomeDesktop}; " +
         $"Initial Catalog={nomeBancoDados};" +

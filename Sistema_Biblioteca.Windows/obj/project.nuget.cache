@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "39A0y8yPXn8fKUFzMYB7mvVtPQPXJWUl5fmtSztV0umkUUocSMFzfAak9+Ih8Dcy90EPAmEeeCQR6CcmaEpMRg==",
+  "dgSpecHash": "ot8yaSBQOZM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação C# facul\\Sistema_Biblioteca\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
+  "projectFilePath": "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação Facul\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bielt\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\bielt\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
