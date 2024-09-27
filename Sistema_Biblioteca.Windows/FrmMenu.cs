@@ -48,7 +48,14 @@ namespace Sistema_Biblioteca.Windows
             MnSIdioma.Enabled = false;
             oFrm.Show();
         }
-        
+        private void MnuGerirUsuario_Click(object sender, EventArgs e)
+        {
+            FrmGerirUsuario oFrm = new FrmGerirUsuario(MnuGerirUsuario, MnSGerirUsuario);
+            oFrm.MdiParent = this;
+            MnuGerirUsuario.Enabled = false;
+            MnSGerirUsuario.Enabled = false;
+            oFrm.Show();
+        }
 
         private void MnSGenero_Click(object sender, EventArgs e)
         {
@@ -62,16 +69,17 @@ namespace Sistema_Biblioteca.Windows
         {
             MnuIdioma_Click(sender, e);
         }
-       
 
+        private void MnSGerirUsuario_Click(object sender, EventArgs e)
+        {
+            MnuGerirUsuario_Click(sender, e);
+        }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
 
-
-
-        
+       
     }
 }

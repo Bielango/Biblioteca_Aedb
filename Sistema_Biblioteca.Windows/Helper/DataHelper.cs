@@ -21,6 +21,8 @@ namespace Sistema_Biblioteca.Windows.Helper
 
         public static List<Idioma> ListaIdioma { get; set; }
 
+        public static List<GerirUsuario> ListaGerirUsuario { get; set; }
+
         //conexao com banco de dados
         public static SqlConnection Conexao()
         {
