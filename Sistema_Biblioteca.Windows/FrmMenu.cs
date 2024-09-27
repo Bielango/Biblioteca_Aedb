@@ -31,6 +31,7 @@ namespace Sistema_Biblioteca.Windows
             MnSGenero.Enabled = false;
             oFrm.Show();
         }
+
         private void MnuAutor_Click(object sender, EventArgs e)
         {
             FrmAutor oFrm = new FrmAutor(MnuAutor, MnSAutor);
@@ -49,24 +50,40 @@ namespace Sistema_Biblioteca.Windows
             oFrm.Show();
         }
 
+        private void MnuEditora_Click(object sender, EventArgs e)
+        {
+            FrmEditora oFrm = new FrmEditora(MnuEditora, MnSEditora);
+            oFrm.MdiParent = this;
+            MnuEditora.Enabled = false;
+            MnSEditora.Enabled = false;
+            oFrm.Show();
+        }
+
 
         private void MnSGenero_Click(object sender, EventArgs e)
         {
             MnuGenero_Click(sender, e);
         }
+
         private void MnSAutor_Click(object sender, EventArgs e)
         {
             MnuAutor_Click(sender, e);
-        }
-        
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void MnSIdioma_Click(object sender, EventArgs e)
         {
             MnuIdioma_Click(sender, e);
         }
+
+        private void MnSEditora_Click(object sender, EventArgs e)
+        {
+            MnuEditora_Click(sender, e);
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
