@@ -59,6 +59,15 @@ namespace Sistema_Biblioteca.Windows
             oFrm.Show();
         }
 
+        private void MnuLivro_Click(object sender, EventArgs e)
+        {
+            FrmLivro oFrm = new FrmLivro(MnuLivro, MnSLivro);
+            oFrm.MdiParent = this;
+            MnuLivro.Enabled = false;
+            MnSLivro.Enabled = false;
+            oFrm.Show();
+        }
+
 
         private void MnSGenero_Click(object sender, EventArgs e)
         {
@@ -80,6 +89,10 @@ namespace Sistema_Biblioteca.Windows
             MnuEditora_Click(sender, e);
         }
 
+        private void MnSLivro_Click(object sender, EventArgs e)
+        {
+            MnuLivro_Click(sender, e);
+        }
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
