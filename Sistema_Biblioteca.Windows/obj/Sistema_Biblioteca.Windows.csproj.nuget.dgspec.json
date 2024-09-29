@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\Golia\\Documents\\Git\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj": {}
   },
   "projects": {
@@ -13,19 +12,6 @@
         "projectPath": "C:\\Users\\Golia\\Documents\\Git\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
         "packagesPath": "C:\\Users\\Golia\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Golia\\Documents\\Git\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\obj\\",
-=======
-    "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação Facul\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação Facul\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação Facul\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
-        "projectName": "Sistema_Biblioteca.Windows",
-        "projectPath": "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação Facul\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
-        "packagesPath": "C:\\Users\\bielt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação Facul\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\obj\\",
->>>>>>> 31298207bdcfd86c0bb2de7e3ab11dc7d90cea6e
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -88,11 +74,7 @@
               "privateAssets": "none"
             }
           },
-<<<<<<< HEAD
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
-=======
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
->>>>>>> 31298207bdcfd86c0bb2de7e3ab11dc7d90cea6e
         }
       }
     }

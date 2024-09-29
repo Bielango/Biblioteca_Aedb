@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "WTCByAI6Bhg=",
+  "dgSpecHash": "7Rq/aE1w2Qk=",
   "success": true,
   "projectFilePath": "C:\\Users\\Golia\\Documents\\Git\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
-=======
-  "dgSpecHash": "ot8yaSBQOZM=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação Facul\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
->>>>>>> 31298207bdcfd86c0bb2de7e3ab11dc7d90cea6e
   "expectedPackageFiles": [
     "C:\\Users\\Golia\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Golia\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -45,5 +39,12 @@
     "C:\\Users\\Golia\\.nuget\\packages\\system.text.json\\4.7.2\\system.text.json.4.7.2.nupkg.sha512",
     "C:\\Users\\Golia\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Golia\\Documents\\Git\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
