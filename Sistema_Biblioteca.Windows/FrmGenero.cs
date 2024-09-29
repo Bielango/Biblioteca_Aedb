@@ -156,25 +156,30 @@ namespace Sistema_Biblioteca.Windows
 
         private void GrdItens_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (GrdItens.Rows[e.RowIndex].DataBoundItem != null)
+            if (e.RowIndex >= 0 && e.RowIndex < GrdItens.Rows.Count)
             {
-
-                Genero objSelecionado = (Genero)GrdItens.Rows[e.RowIndex].DataBoundItem;
-
-                if (GrdItens.Columns[e.ColumnIndex].Name == "BtnAlterar")
+                if (GrdItens.Rows[e.RowIndex].DataBoundItem != null)
                 {
-                    TxtCodigo.Text = objSelecionado.id.ToString();
-                    TxtNome.Text = objSelecionado.Nome;
-                    TxtCodigo.Enabled = false;
-                    TxtNome.Focus();
-                    Incluir = false;
-                }
-                else if (GrdItens.Columns[e.ColumnIndex].Name == "BtnExcluir")
-                {
-                    if(MessageBox.Show("Confirme a exclusão.",ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    Genero objSelecionado = (Genero)GrdItens.Rows[e.RowIndex].DataBoundItem;
+
+                    if (e.ColumnIndex >= 0 && e.ColumnIndex < GrdItens.Columns.Count)
                     {
-                        objSelecionado.Excluir();
-                        CarregaGrid();
+                        if (GrdItens.Columns[e.ColumnIndex].Name == "BtnAlterar")
+                        {
+                            TxtCodigo.Text = objSelecionado.id.ToString();
+                            TxtNome.Text = objSelecionado.Nome;
+                            TxtCodigo.Enabled = false;
+                            TxtNome.Focus();
+                            Incluir = false;
+                        }
+                        else if (GrdItens.Columns[e.ColumnIndex].Name == "BtnExcluir")
+                        {
+                            if (MessageBox.Show("Confirme a exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                objSelecionado.Excluir();
+                                CarregaGrid();
+                            }
+                        }
                     }
                 }
             }
