@@ -49,7 +49,6 @@ namespace Sistema_Biblioteca.Windows
             MnSIdioma.Enabled = false;
             oFrm.Show();
         }
-<<<<<<< HEAD
         private void MnuGerirUsuario_Click(object sender, EventArgs e)
         {
             FrmGerirUsuario oFrm = new FrmGerirUsuario(MnuGerirUsuario, MnSGerirUsuario);
@@ -58,8 +57,6 @@ namespace Sistema_Biblioteca.Windows
             MnSGerirUsuario.Enabled = false;
             oFrm.Show();
         }
-=======
-
         private void MnuEditora_Click(object sender, EventArgs e)
         {
             FrmEditora oFrm = new FrmEditora(MnuEditora, MnSEditora);
@@ -69,7 +66,15 @@ namespace Sistema_Biblioteca.Windows
             oFrm.Show();
         }
 
->>>>>>> 31298207bdcfd86c0bb2de7e3ab11dc7d90cea6e
+        private void MnuLivro_Click(object sender, EventArgs e)
+        {
+            FrmLivro oFrm = new FrmLivro(MnuLivro, MnSLivro);
+            oFrm.MdiParent = this;
+            MnuLivro.Enabled = false;
+            MnSLivro.Enabled = false;
+            oFrm.Show();
+        }
+
 
         private void MnSGenero_Click(object sender, EventArgs e)
         {
@@ -80,7 +85,7 @@ namespace Sistema_Biblioteca.Windows
         {
             MnuAutor_Click(sender, e);
         }
-<<<<<<< HEAD
+
         private void MnSIdioma_Click(object sender, EventArgs e)
         {
             MnuIdioma_Click(sender, e);
@@ -90,14 +95,6 @@ namespace Sistema_Biblioteca.Windows
         {
             MnuGerirUsuario_Click(sender, e);
         }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
-=======
 
         private void MnSIdioma_Click(object sender, EventArgs e)
         {
@@ -109,11 +106,14 @@ namespace Sistema_Biblioteca.Windows
             MnuEditora_Click(sender, e);
         }
 
+        private void MnSLivro_Click(object sender, EventArgs e)
+        {
+            MnuLivro_Click(sender, e);
+        }
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
 
->>>>>>> 31298207bdcfd86c0bb2de7e3ab11dc7d90cea6e
     }
 }
