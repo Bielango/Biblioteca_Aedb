@@ -217,3 +217,4 @@ C:\Users\bielt\OneDrive\Área de Trabalho\Programação Facul\Biblioteca_Aedb\Si
 C:\Users\bielt\OneDrive\Área de Trabalho\Programação Facul\Biblioteca_Aedb\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.genruntimeconfig.cache
 C:\Users\bielt\OneDrive\Área de Trabalho\Programação Facul\Biblioteca_Aedb\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\ref\Sistema_Biblioteca.Windows.dll
 C:\Users\bielt\OneDrive\Área de Trabalho\Programação Facul\Biblioteca_Aedb\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.FrmLivro.resources
+C:\Users\bielt\OneDrive\Área de Trabalho\Programação Facul\Biblioteca_Aedb\Sistema_Biblioteca.Windows\obj\Debug\net8.0-windows\Sistema_Biblioteca.Windows.FrmGerirUsuario.resources

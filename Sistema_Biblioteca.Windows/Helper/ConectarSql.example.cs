@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Biblioteca.Windows.Helper
 {
-    internal class ConectarSql
+    internal class ConectarSqlExample
     {
         static string nomeDesktop = "DESKTOP-8TJAN6U";
         static string nomeBancoDados = "biblioteca - classes";

@@ -96,11 +96,6 @@ namespace Sistema_Biblioteca.Windows
             MnuGerirUsuario_Click(sender, e);
         }
 
-        private void MnSIdioma_Click(object sender, EventArgs e)
-        {
-            MnuIdioma_Click(sender, e);
-        }
-
         private void MnSEditora_Click(object sender, EventArgs e)
         {
             MnuEditora_Click(sender, e);
