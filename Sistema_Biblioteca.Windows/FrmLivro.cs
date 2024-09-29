@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Sistema_Biblioteca.Windows
 {
-    public partial class FrmEditora : Form
+    public partial class FrmLivro : Form
     {
         ToolStripMenuItem _mnu;
         ToolStripMenuItem _mnu2;
 
         private bool Incluir = true;
 
-        public FrmEditora(ToolStripMenuItem Mnu1, ToolStripMenuItem Mnu2)
+        public FrmLivro(ToolStripMenuItem Mnu1, ToolStripMenuItem Mnu2)
         {
             InitializeComponent();
             _mnu = Mnu1;
@@ -27,23 +27,23 @@ namespace Sistema_Biblioteca.Windows
         private void CarregaGrid()
         {
             GrdItens.AutoGenerateColumns = false;
-            GrdItens.DataSource = Editora.ListarTodos();
+            GrdItens.DataSource = Livro.ListarTodos();
         }
 
-        private void FrmEditora_Load(object sender, EventArgs e)
+        private void FrmLivro_Load(object sender, EventArgs e)
         {
             CarregaGrid();
         }
 
-        private void FrmEditora_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmLivro_FormClosed(object sender, FormClosedEventArgs e)
         {
             _mnu.Enabled = true;
             _mnu2.Enabled = true;
         }
 
-        private void FrmEditora_Activated(object sender, EventArgs e)
+        private void FrmLivro_Activated(object sender, EventArgs e)
         {
-            ((FrmMenu)this.MdiParent).LblDisplay.Text = "Cadastro de Editoras";
+            ((FrmMenu)this.MdiParent).LblDisplay.Text = "Cadastro de Livros";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace Sistema_Biblioteca.Windows
                 if (Incluir)
                 {
 
-                    Editora oEditora = new Editora
+                    Livro oLivro = new Livro
                     {
                         //id = int.Parse(TxtCodigo.Text),
                         Nome = TxtNome.Text
@@ -103,20 +103,20 @@ namespace Sistema_Biblioteca.Windows
 
                     try
                     {
-                        oEditora.Incluir();
+                        oLivro.Incluir();
                         CarregaGrid();
                         LimpaControles();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Um erro ocorreu ao incluir a Editora: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Um erro ocorreu ao incluir o Livro: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         TxtCodigo.Focus();
                     }
                 }
                 else
                 {
                     
-                    Editora oEditora = new Editora
+                    Livro oLivro = new Livro
                     {
                         id = int.Parse(TxtCodigo.Text),
                         Nome = TxtNome.Text
@@ -124,7 +124,7 @@ namespace Sistema_Biblioteca.Windows
                     try
                     {
                     
-                        Editora.Alterar(oEditora);
+                        Livro.Alterar(oLivro);
                         CarregaGrid();
                         LimpaControles();
                         Incluir = true;
@@ -132,7 +132,7 @@ namespace Sistema_Biblioteca.Windows
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Um erro ocorreu ao alterar a Editora: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Um erro ocorreu ao alterar o Livro: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         TxtCodigo.Focus();
                     }
                 }
@@ -159,7 +159,7 @@ namespace Sistema_Biblioteca.Windows
             if (GrdItens.Rows[e.RowIndex].DataBoundItem != null)
             {
 
-                Editora objSelecionado = (Editora)GrdItens.Rows[e.RowIndex].DataBoundItem;
+                Livro objSelecionado = (Livro)GrdItens.Rows[e.RowIndex].DataBoundItem;
 
                 if (GrdItens.Columns[e.ColumnIndex].Name == "BtnAlterar")
                 {

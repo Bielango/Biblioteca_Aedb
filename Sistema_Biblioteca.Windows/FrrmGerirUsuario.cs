@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Sistema_Biblioteca.Windows
 {
-    public partial class FrmEditora : Form
+    public partial class FrmGerirUsuario : Form
     {
         ToolStripMenuItem _mnu;
         ToolStripMenuItem _mnu2;
 
         private bool Incluir = true;
 
-        public FrmEditora(ToolStripMenuItem Mnu1, ToolStripMenuItem Mnu2)
+        public FrmGerirUsuario(ToolStripMenuItem Mnu1, ToolStripMenuItem Mnu2)
         {
             InitializeComponent();
             _mnu = Mnu1;
@@ -27,23 +27,23 @@ namespace Sistema_Biblioteca.Windows
         private void CarregaGrid()
         {
             GrdItens.AutoGenerateColumns = false;
-            GrdItens.DataSource = Editora.ListarTodos();
+            GrdItens.DataSource = GerirUsuario.ListarTodos();
         }
 
-        private void FrmEditora_Load(object sender, EventArgs e)
+        private void FrmGerirUsuario_Load(object sender, EventArgs e)
         {
             CarregaGrid();
         }
 
-        private void FrmEditora_FormClosed(object sender, FormClosedEventArgs e)
+        private void FrmGerirUsuario_FormClosed(object sender, FormClosedEventArgs e)
         {
             _mnu.Enabled = true;
             _mnu2.Enabled = true;
         }
 
-        private void FrmEditora_Activated(object sender, EventArgs e)
+        private void FrmGerirUsuario_Activated(object sender, EventArgs e)
         {
-            ((FrmMenu)this.MdiParent).LblDisplay.Text = "Cadastro de Editoras";
+            ((FrmMenu)this.MdiParent).LblDisplay.Text = "Cadastro de Gerir Usuários";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -95,7 +95,7 @@ namespace Sistema_Biblioteca.Windows
                 if (Incluir)
                 {
 
-                    Editora oEditora = new Editora
+                    GerirUsuario oGerirUsuario = new GerirUsuario
                     {
                         //id = int.Parse(TxtCodigo.Text),
                         Nome = TxtNome.Text
@@ -103,28 +103,28 @@ namespace Sistema_Biblioteca.Windows
 
                     try
                     {
-                        oEditora.Incluir();
+                        oGerirUsuario.Incluir();
                         CarregaGrid();
                         LimpaControles();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Um erro ocorreu ao incluir a Editora: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Um erro ocorreu ao incluir o Gerir Usuário: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         TxtCodigo.Focus();
                     }
                 }
                 else
                 {
-                    
-                    Editora oEditora = new Editora
+
+                    GerirUsuario oGerirUsuario = new GerirUsuario
                     {
                         id = int.Parse(TxtCodigo.Text),
                         Nome = TxtNome.Text
                     };
                     try
                     {
-                    
-                        Editora.Alterar(oEditora);
+
+                        GerirUsuario.Alterar(oGerirUsuario);
                         CarregaGrid();
                         LimpaControles();
                         Incluir = true;
@@ -132,7 +132,7 @@ namespace Sistema_Biblioteca.Windows
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"Um erro ocorreu ao alterar a Editora: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"Um erro ocorreu ao alterar o Gerir Usuário: {ex.Message}.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         TxtCodigo.Focus();
                     }
                 }
@@ -159,7 +159,7 @@ namespace Sistema_Biblioteca.Windows
             if (GrdItens.Rows[e.RowIndex].DataBoundItem != null)
             {
 
-                Editora objSelecionado = (Editora)GrdItens.Rows[e.RowIndex].DataBoundItem;
+                GerirUsuario objSelecionado = (GerirUsuario)GrdItens.Rows[e.RowIndex].DataBoundItem;
 
                 if (GrdItens.Columns[e.ColumnIndex].Name == "BtnAlterar")
                 {
@@ -171,13 +171,23 @@ namespace Sistema_Biblioteca.Windows
                 }
                 else if (GrdItens.Columns[e.ColumnIndex].Name == "BtnExcluir")
                 {
-                    if(MessageBox.Show("Confirme a exclusão.",ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Confirme a exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         objSelecionado.Excluir();
                         CarregaGrid();
                     }
                 }
             }
+        }
+
+        private void CbxCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GrdItens_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

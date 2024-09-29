@@ -1,6 +1,6 @@
 ﻿namespace Sistema_Biblioteca.Windows
 {
-    partial class FrmGenero
+    partial class FrmGerirUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             TxtCodigo = new TextBox();
             TxtNome = new TextBox();
             LblCodigo = new Label();
@@ -44,8 +44,10 @@
             GrdItens = new DataGridView();
             Codigo = new DataGridViewTextBoxColumn();
             Nome = new DataGridViewTextBoxColumn();
+            Cargo = new DataGridViewTextBoxColumn();
             BtnAlterar = new DataGridViewButtonColumn();
             BtnExcluir = new DataGridViewButtonColumn();
+            CbxCargo = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)GrdItens).BeginInit();
             SuspendLayout();
             // 
@@ -60,7 +62,7 @@
             TxtCodigo.Name = "TxtCodigo";
             TxtCodigo.Size = new Size(51, 23);
             TxtCodigo.TabIndex = 1;
-            toolTip1.SetToolTip(TxtCodigo, "Código numérico do gênero");
+            toolTip1.SetToolTip(TxtCodigo, "Código numérico do Gerir Usuário");
             TxtCodigo.TextChanged += textBox1_TextChanged;
             // 
             // TxtNome
@@ -73,7 +75,7 @@
             TxtNome.Name = "TxtNome";
             TxtNome.Size = new Size(496, 23);
             TxtNome.TabIndex = 3;
-            toolTip1.SetToolTip(TxtNome, "Nome do gênero do filme");
+            toolTip1.SetToolTip(TxtNome, "Nome do Gerir Usuário do filme");
             TxtNome.TextChanged += TxtNome_TextChanged;
             // 
             // LblCodigo
@@ -125,16 +127,16 @@
             GrdItens.AllowUserToDeleteRows = false;
             GrdItens.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             GrdItens.BackgroundColor = Color.Gray;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.DimGray;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = SystemColors.InfoText;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(255, 128, 0);
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            GrdItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.DimGray;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = SystemColors.InfoText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(255, 128, 0);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            GrdItens.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             GrdItens.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            GrdItens.Columns.AddRange(new DataGridViewColumn[] { Codigo, Nome, BtnAlterar, BtnExcluir });
+            GrdItens.Columns.AddRange(new DataGridViewColumn[] { Codigo, Nome, Cargo, BtnAlterar, BtnExcluir });
             GrdItens.EnableHeadersVisualStyles = false;
             GrdItens.GridColor = Color.Silver;
             GrdItens.Location = new Point(4, 103);
@@ -144,12 +146,13 @@
             GrdItens.Size = new Size(764, 318);
             GrdItens.TabIndex = 6;
             GrdItens.CellClick += GrdItens_CellClick;
+            GrdItens.CellContentClick += GrdItens_CellContentClick_1;
             // 
             // Codigo
             // 
             Codigo.DataPropertyName = "id";
-            dataGridViewCellStyle7.BackColor = Color.Gray;
-            Codigo.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.BackColor = Color.Gray;
+            Codigo.DefaultCellStyle = dataGridViewCellStyle2;
             Codigo.HeaderText = "Código";
             Codigo.MinimumWidth = 6;
             Codigo.Name = "Codigo";
@@ -158,18 +161,23 @@
             // Nome
             // 
             Nome.DataPropertyName = "Nome";
-            dataGridViewCellStyle8.BackColor = Color.Gray;
-            Nome.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.BackColor = Color.Gray;
+            Nome.DefaultCellStyle = dataGridViewCellStyle3;
             Nome.HeaderText = "Nome";
             Nome.MinimumWidth = 6;
             Nome.Name = "Nome";
             Nome.Width = 200;
             // 
+            // Cargo
+            // 
+            Cargo.HeaderText = "Cargo";
+            Cargo.Name = "Cargo";
+            // 
             // BtnAlterar
             // 
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = Color.Gray;
-            BtnAlterar.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = Color.Gray;
+            BtnAlterar.DefaultCellStyle = dataGridViewCellStyle4;
             BtnAlterar.HeaderText = "Alterar";
             BtnAlterar.MinimumWidth = 6;
             BtnAlterar.Name = "BtnAlterar";
@@ -177,15 +185,26 @@
             // 
             // BtnExcluir
             // 
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = Color.Gray;
-            BtnExcluir.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = Color.Gray;
+            BtnExcluir.DefaultCellStyle = dataGridViewCellStyle5;
             BtnExcluir.HeaderText = "Excluir";
             BtnExcluir.MinimumWidth = 6;
             BtnExcluir.Name = "BtnExcluir";
             BtnExcluir.Width = 125;
             // 
-            // FrmGenero
+            // CbxCargo
+            // 
+            CbxCargo.BackColor = SystemColors.GrayText;
+            CbxCargo.FormattingEnabled = true;
+            CbxCargo.Items.AddRange(new object[] { "Bibliotecario", "Cliente", "Administrador" });
+            CbxCargo.Location = new Point(603, 24);
+            CbxCargo.Name = "CbxCargo";
+            CbxCargo.Size = new Size(133, 23);
+            CbxCargo.TabIndex = 7;
+            CbxCargo.SelectedIndexChanged += CbxCargo_SelectedIndexChanged;
+            // 
+            // FrmGerirUsuario
             // 
             AcceptButton = BtnSalvar;
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -193,6 +212,7 @@
             BackColor = Color.FromArgb(64, 64, 64);
             CancelButton = BtnFechar;
             ClientSize = new Size(772, 430);
+            Controls.Add(CbxCargo);
             Controls.Add(GrdItens);
             Controls.Add(BtnFechar);
             Controls.Add(BtnSalvar);
@@ -202,11 +222,11 @@
             Controls.Add(TxtCodigo);
             ForeColor = SystemColors.ControlLight;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "FrmGenero";
-            Text = "Cadastro de Gêneros de Filme";
-            Activated += FrmGenero_Activated;
-            FormClosed += FrmGenero_FormClosed;
-            Load += FrmGenero_Load;
+            Name = "FrmGerirUsuario";
+            Text = "Cadastro de Gerir Usuários de Filme";
+            Activated += FrmGerirUsuario_Activated;
+            FormClosed += FrmGerirUsuario_FormClosed;
+            Load += FrmGerirUsuario_Load;
             ((System.ComponentModel.ISupportInitialize)GrdItens).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -224,7 +244,9 @@
         private DataGridView GrdItens;
         private DataGridViewTextBoxColumn Codigo;
         private DataGridViewTextBoxColumn Nome;
+        private DataGridViewTextBoxColumn Cargo;
         private DataGridViewButtonColumn BtnAlterar;
         private DataGridViewButtonColumn BtnExcluir;
+        private ComboBox CbxCargo;
     }
 }

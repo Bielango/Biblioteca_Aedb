@@ -1,6 +1,6 @@
 ﻿namespace Sistema_Biblioteca.Windows
 {
-    partial class FrmGenero
+    partial class FrmLivro
     {
         /// <summary>
         /// Required designer variable.
@@ -60,7 +60,7 @@
             TxtCodigo.Name = "TxtCodigo";
             TxtCodigo.Size = new Size(51, 23);
             TxtCodigo.TabIndex = 1;
-            toolTip1.SetToolTip(TxtCodigo, "Código numérico do gênero");
+            toolTip1.SetToolTip(TxtCodigo, "Código numérico do livro");
             TxtCodigo.TextChanged += textBox1_TextChanged;
             // 
             // TxtNome
@@ -73,7 +73,7 @@
             TxtNome.Name = "TxtNome";
             TxtNome.Size = new Size(496, 23);
             TxtNome.TabIndex = 3;
-            toolTip1.SetToolTip(TxtNome, "Nome do gênero do filme");
+            toolTip1.SetToolTip(TxtNome, "Nome do livro");
             TxtNome.TextChanged += TxtNome_TextChanged;
             // 
             // LblCodigo
@@ -185,7 +185,7 @@
             BtnExcluir.Name = "BtnExcluir";
             BtnExcluir.Width = 125;
             // 
-            // FrmGenero
+            // FrmLivro
             // 
             AcceptButton = BtnSalvar;
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -202,11 +202,11 @@
             Controls.Add(TxtCodigo);
             ForeColor = SystemColors.ControlLight;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "FrmGenero";
-            Text = "Cadastro de Gêneros de Filme";
-            Activated += FrmGenero_Activated;
-            FormClosed += FrmGenero_FormClosed;
-            Load += FrmGenero_Load;
+            Name = "FrmLivro";
+            Text = "Cadastro de livros da Biblioteca";
+            Activated += FrmLivro_Activated;
+            FormClosed += FrmLivro_FormClosed;
+            Load += FrmLivro_Load;
             ((System.ComponentModel.ISupportInitialize)GrdItens).EndInit();
             ResumeLayout(false);
             PerformLayout();
