@@ -14,9 +14,9 @@ namespace Sistema_Biblioteca.Windows.Model
         private int _id;
 
         private string _Nome;
-        private string _Edicao;
+        private int _Edicao;
         private string _ISBN;
-        private string _QtdPaginas;
+        private int _QtdPaginas;
         private string _Descricao;
         public int id
         { 
@@ -24,9 +24,9 @@ namespace Sistema_Biblioteca.Windows.Model
             set { _id = value; }
         }
         public string Nome { get => _Nome; set => _Nome = value.Replace("'",""); }
-        public string Edicao { get => _Edicao; set => _Edicao = value.Replace("'", ""); }
+        public int Edicao { get => _Edicao; set => _Edicao = value; }
         public string ISBN { get => _ISBN; set => _ISBN = value.Replace("'", ""); }
-        public string QtdPaginas { get => _QtdPaginas; set => _QtdPaginas = value.Replace("'", ""); }
+        public int QtdPaginas { get => _QtdPaginas; set => _QtdPaginas = value; }
         public string Descricao { get => _Descricao; set => _Descricao = value.Replace("'", ""); }
 
         public static List<Livro> ListarTodos()
@@ -43,9 +43,9 @@ namespace Sistema_Biblioteca.Windows.Model
                     Livro oLivro = new Livro();
                     oLivro.id = oDr.GetInt32(oDr.GetOrdinal("id"));
                     oLivro.Nome = oDr.GetString(oDr.GetOrdinal("Nome"));
-                    oLivro.Edicao = oDr.GetString(oDr.GetOrdinal("Edicao"));
+                    oLivro.Edicao = oDr.GetInt32(oDr.GetOrdinal("Edicao"));
                     oLivro.ISBN = oDr.GetString(oDr.GetOrdinal("ISBN"));
-                    oLivro.QtdPaginas = oDr.GetString(oDr.GetOrdinal("QtdPaginas"));
+                    oLivro.QtdPaginas = oDr.GetSInt32(oDr.GetOrdinal("QtdPaginas"));
                     oLivro.Descricao = oDr.GetString(oDr.GetOrdinal("Descricao"));
                     Retorno.Add(oLivro);
                 }
@@ -70,10 +70,10 @@ namespace Sistema_Biblioteca.Windows.Model
                     Retorno = new Livro();
                     Retorno.id = oDr.GetInt32(oDr.GetOrdinal("id"));
                     Retorno.Nome = oDr.GetString(oDr.GetOrdinal("Nome"));
-                    Retorno.Nome = oDr.GetString(oDr.GetOrdinal("Edicao"));
-                    Retorno.Nome = oDr.GetString(oDr.GetOrdinal("ISBN"));
-                    Retorno.Nome = oDr.GetString(oDr.GetOrdinal("QtdPaginas"));
-                    Retorno.Nome = oDr.GetString(oDr.GetOrdinal("Descricao"));
+                    Retorno.Edicao = oDr.GetInt32(oDr.GetOrdinal("Edicao"));
+                    Retorno.ISBN = oDr.GetString(oDr.GetOrdinal("ISBN"));
+                    Retorno.QtdPaginas = oDr.GetInt32(oDr.GetOrdinal("QtdPaginas"));
+                    Retorno.Descricao = oDr.GetString(oDr.GetOrdinal("Descricao"));
 
                 }
                 oDr.Close();
@@ -101,9 +101,9 @@ namespace Sistema_Biblioteca.Windows.Model
             using (var oCn = DataHelper.Conexao())
             {
                 string SQL = $"insert into Livro values('{this.Nome.Replace("'","")}" +
-                    $"{this.Edicao.Replace("'", "")}" +
+                    $"{this.Edicao}" +
                     $"{this.ISBN.Replace("'", "")}" +
-                    $"{this.QtdPaginas.Replace("'", "")}" +
+                    $"{this.QtdPaginas}" +
                     $"{this.Descricao.Replace("'", "")}')";
                 SqlCommand comando = new SqlCommand(SQL, oCn);
                 comando.ExecuteNonQuery();
@@ -123,10 +123,10 @@ namespace Sistema_Biblioteca.Windows.Model
             using (var oCn = DataHelper.Conexao())
             {
                 string SQL = $"update Livro set Nome='{oLivro.Nome.Replace("'", "")}" +
-                    $"{oLivro.Edicao.Replace("'", "")}" +
-                    $"{oLivro.ISBN.Replace("'", "")}" +
-                    $"{oLivro.QtdPaginas.Replace("'", "")}" +
-                    $"{oLivro.Descricao.Replace("'", "")}' where id={oLivro.id}";
+                    $"idEdicao = '{oLivro.Edicao}'" +
+                    $"ISBN = '{oLivro.ISBN.Replace("'", "")}'" +
+                    $"QtdPaginas = '{oLivro.QtdPaginas}'" +
+                    $"Descricao = '{oLivro.Descricao.Replace("'", "")}' where id={oLivro.id}";
                 SqlCommand comando = new SqlCommand(SQL, oCn);
                 comando.ExecuteNonQuery();
             }
