@@ -118,9 +118,9 @@ namespace Sistema_Biblioteca.Windows
                     {
                         //id = int.Parse(TxtCodigo.Text),
                         Nome = TxtNome.Text,
-                        Edicao = TxtEdicao.Text,
+                        Edicao = Convert.ToInt32(TxtEdicao.Text),
                         ISBN = TxtISBN.Text,
-                        QtdPaginas = TxtQtdPaginas.Text,
+                        QtdPaginas = Convert.ToInt32(TxtQtdPaginas.Text),
                         Descricao = TxtDescricao.Text,
                     };
 
@@ -174,9 +174,9 @@ namespace Sistema_Biblioteca.Windows
                 {
                     TxtCodigo.Text = objSelecionado.id.ToString();
                     TxtNome.Text = objSelecionado.Nome;
-                    TxtEdicao.Text = objSelecionado.Edicao;
+                    TxtEdicao.Text = objSelecionado.Edicao.ToString();
                     TxtISBN.Text = objSelecionado.ISBN;
-                    TxtQtdPaginas.Text = objSelecionado.QtdPaginas;
+                    TxtQtdPaginas.Text = objSelecionado.QtdPaginas.ToString();
                     TxtDescricao.Text = objSelecionado.Descricao;
                     TxtNome.Focus();
                     TxtEdicao.Focus();

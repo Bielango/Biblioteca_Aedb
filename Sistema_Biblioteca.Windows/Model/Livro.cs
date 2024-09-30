@@ -45,7 +45,7 @@ namespace Sistema_Biblioteca.Windows.Model
                     oLivro.Nome = oDr.GetString(oDr.GetOrdinal("Nome"));
                     oLivro.Edicao = oDr.GetInt32(oDr.GetOrdinal("Edicao"));
                     oLivro.ISBN = oDr.GetString(oDr.GetOrdinal("ISBN"));
-                    oLivro.QtdPaginas = oDr.GetSInt32(oDr.GetOrdinal("QtdPaginas"));
+                    oLivro.QtdPaginas = oDr.GetInt32(oDr.GetOrdinal("QtdPaginas"));
                     oLivro.Descricao = oDr.GetString(oDr.GetOrdinal("Descricao"));
                     Retorno.Add(oLivro);
                 }

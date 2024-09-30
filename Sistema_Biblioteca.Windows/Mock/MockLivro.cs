@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Sistema_Biblioteca.Windows.Mock;
 using Sistema_Biblioteca.Windows.Helper;
 using Sistema_Biblioteca.Windows.Model;
+using System.Security.Cryptography;
 
 namespace Sistema_Biblioteca.Windows.Mock
 {
@@ -13,6 +14,8 @@ namespace Sistema_Biblioteca.Windows.Mock
     {
         public static void CarregaLivro()
         {
+            Random novoRandom = new Random(); 
+
             List<Livro> oLista = new List<Livro>();
 
             for (int i = 1; i < 11; i++)
@@ -21,9 +24,9 @@ namespace Sistema_Biblioteca.Windows.Mock
                 {
                     id = i,
                     Nome = $"Livro {i}",
-                    Edicao = $"Livro {i}",
+                    Edicao = novoRandom.Next(100),
                     ISBN = $"Livro {i}",
-                    QtdPaginas = $"Livro {i}",
+                    QtdPaginas = novoRandom.Next(100),
                     Descricao = $"Livro {i}"
                 };
                 oLista.Add(oLivro);
