@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação Facul\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj": {}
+    "C:\\Users\\JP\\Desktop\\PROJETO\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação Facul\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj": {
+    "C:\\Users\\JP\\Desktop\\PROJETO\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação Facul\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
+        "projectUniqueName": "C:\\Users\\JP\\Desktop\\PROJETO\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
         "projectName": "Sistema_Biblioteca.Windows",
-        "projectPath": "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação Facul\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
-        "packagesPath": "C:\\Users\\bielt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bielt\\OneDrive\\Área de Trabalho\\Programação Facul\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\obj\\",
+        "projectPath": "C:\\Users\\JP\\Desktop\\PROJETO\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\Sistema_Biblioteca.Windows.csproj",
+        "packagesPath": "C:\\Users\\JP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JP\\Desktop\\PROJETO\\Biblioteca_Aedb\\Sistema_Biblioteca.Windows\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\bielt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
