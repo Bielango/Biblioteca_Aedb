@@ -14,12 +14,20 @@ namespace Sistema_Biblioteca.Windows.Model
         private int _id;
 
         private string _Nome;
+        private string _Edicao;
+        private string _ISBN;
+        private string _QtdPaginas;
+        private string _Descricao;
         public int id
         { 
             get{ return _id; }
             set { _id = value; }
         }
         public string Nome { get => _Nome; set => _Nome = value.Replace("'",""); }
+        public string Edicao { get => _Edicao; set => _Edicao = value.Replace("'", ""); }
+        public string ISBN { get => _ISBN; set => _ISBN = value.Replace("'", ""); }
+        public string QtdPaginas { get => _QtdPaginas; set => _QtdPaginas = value.Replace("'", ""); }
+        public string Descricao { get => _Descricao; set => _Descricao = value.Replace("'", ""); }
 
         public static List<Livro> ListarTodos()
         {
@@ -27,7 +35,7 @@ namespace Sistema_Biblioteca.Windows.Model
             using (var oCn = DataHelper.Conexao())
             {
                 List<Livro> Retorno = new List<Livro>();
-                string SQL = $"select id, Nome from Livro";
+                string SQL = $"select id, Nome, ISBN, Descricao, Edicao, QtdPaginas from Livro";
                 SqlCommand comando = new SqlCommand(SQL, oCn);
                 SqlDataReader oDr = comando.ExecuteReader();
                 while(oDr.Read())
@@ -35,6 +43,10 @@ namespace Sistema_Biblioteca.Windows.Model
                     Livro oLivro = new Livro();
                     oLivro.id = oDr.GetInt32(oDr.GetOrdinal("id"));
                     oLivro.Nome = oDr.GetString(oDr.GetOrdinal("Nome"));
+                    oLivro.Edicao = oDr.GetString(oDr.GetOrdinal("Edicao"));
+                    oLivro.ISBN = oDr.GetString(oDr.GetOrdinal("ISBN"));
+                    oLivro.QtdPaginas = oDr.GetString(oDr.GetOrdinal("QtdPaginas"));
+                    oLivro.Descricao = oDr.GetString(oDr.GetOrdinal("Descricao"));
                     Retorno.Add(oLivro);
                 }
                 oDr.Close();
@@ -50,7 +62,7 @@ namespace Sistema_Biblioteca.Windows.Model
             using (var oCn = DataHelper.Conexao())
             {
                 Livro? Retorno = null;
-                string SQL = $"select id, Nome from Livro where id={Codigo}";
+                string SQL = $"select id, Nome, Edicao, ISBN, QtdPaginas, Descricao from Livro where id={Codigo}";
                 SqlCommand comando = new SqlCommand(SQL, oCn);
                 SqlDataReader oDr = comando.ExecuteReader();
                 while (oDr.Read())
@@ -58,6 +70,11 @@ namespace Sistema_Biblioteca.Windows.Model
                     Retorno = new Livro();
                     Retorno.id = oDr.GetInt32(oDr.GetOrdinal("id"));
                     Retorno.Nome = oDr.GetString(oDr.GetOrdinal("Nome"));
+                    Retorno.Nome = oDr.GetString(oDr.GetOrdinal("Edicao"));
+                    Retorno.Nome = oDr.GetString(oDr.GetOrdinal("ISBN"));
+                    Retorno.Nome = oDr.GetString(oDr.GetOrdinal("QtdPaginas"));
+                    Retorno.Nome = oDr.GetString(oDr.GetOrdinal("Descricao"));
+
                 }
                 oDr.Close();
                 return Retorno;
@@ -83,7 +100,11 @@ namespace Sistema_Biblioteca.Windows.Model
         {
             using (var oCn = DataHelper.Conexao())
             {
-                string SQL = $"insert into Livro values('{this.Nome.Replace("'","")}')";
+                string SQL = $"insert into Livro values('{this.Nome.Replace("'","")}" +
+                    $"{this.Edicao.Replace("'", "")}" +
+                    $"{this.ISBN.Replace("'", "")}" +
+                    $"{this.QtdPaginas.Replace("'", "")}" +
+                    $"{this.Descricao.Replace("'", "")}')";
                 SqlCommand comando = new SqlCommand(SQL, oCn);
                 comando.ExecuteNonQuery();
             }
@@ -101,7 +122,11 @@ namespace Sistema_Biblioteca.Windows.Model
         {
             using (var oCn = DataHelper.Conexao())
             {
-                string SQL = $"update Livro set Nome='{oLivro.Nome.Replace("'", "")}' where id={oLivro.id}";
+                string SQL = $"update Livro set Nome='{oLivro.Nome.Replace("'", "")}" +
+                    $"{oLivro.Edicao.Replace("'", "")}" +
+                    $"{oLivro.ISBN.Replace("'", "")}" +
+                    $"{oLivro.QtdPaginas.Replace("'", "")}" +
+                    $"{oLivro.Descricao.Replace("'", "")}' where id={oLivro.id}";
                 SqlCommand comando = new SqlCommand(SQL, oCn);
                 comando.ExecuteNonQuery();
             }

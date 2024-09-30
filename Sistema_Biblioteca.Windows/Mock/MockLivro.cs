@@ -20,8 +20,11 @@ namespace Sistema_Biblioteca.Windows.Mock
                 Livro oLivro = new Livro
                 {
                     id = i,
-                    Nome = $"Livro {i}"                    
-                    
+                    Nome = $"Livro {i}",
+                    Edicao = $"Livro {i}",
+                    ISBN = $"Livro {i}",
+                    QtdPaginas = $"Livro {i}",
+                    Descricao = $"Livro {i}"
                 };
                 oLista.Add(oLivro);
             }

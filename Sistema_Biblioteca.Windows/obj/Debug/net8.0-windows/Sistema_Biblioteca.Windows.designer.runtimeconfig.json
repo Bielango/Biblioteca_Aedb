@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Golia\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Golia\\.nuget\\packages",
+      "C:\\Users\\bielt\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\bielt\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

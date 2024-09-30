@@ -9,8 +9,8 @@ namespace Sistema_Biblioteca.Windows.Helper
 {
     internal class ConectarSql
     {
-        static string nomeDesktop = "DESKTOP-M434B8H";
-        static string nomeBancoDados = "SistemaBiblioteca1";
+        static string nomeDesktop = "DESKTOP-8TJAN6U";
+        static string nomeBancoDados = "biblioteca - classes";
 
         public static string conectar = $"Data Source = {nomeDesktop}; " +
         $"Initial Catalog={nomeBancoDados};" +

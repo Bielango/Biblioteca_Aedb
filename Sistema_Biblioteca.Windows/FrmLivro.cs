@@ -58,34 +58,53 @@ namespace Sistema_Biblioteca.Windows
 
         private bool ValidaControles()
         {
-            int Codigo;
-            //if (TxtCodigo.Text.Trim() == "")
-            //{
-            //    MessageBox.Show("O campo código é de preenchimento obrigatório.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    TxtCodigo.Focus();
-            //    return false;
-            //}
-            //else 
             if (TxtNome.Text.Trim() == "")
             {
                 MessageBox.Show("O campo nome é de preenchimento obrigatório.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TxtNome.Focus();
                 return false;
             }
-            //else if (int.TryParse(TxtCodigo.Text, out Codigo) == false)
-            //{
-            //    MessageBox.Show("O campo código não é numérico.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    TxtCodigo.Focus();
-            //    return false;
-            //}
+            //
+            if (TxtEdicao.Text.Trim() == "")
+            {
+                MessageBox.Show("O campo Edicao é de preenchimento obrigatório.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TxtEdicao.Focus();
+                return false;
+            }
+            //
+            if (TxtISBN.Text.Trim() == "")
+            {
+                MessageBox.Show("O campo ISBN é de preenchimento obrigatório.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TxtISBN.Focus();
+                return false;
+            }
+            //
+            if (TxtQtdPaginas.Text.Trim() == "")
+            {
+                MessageBox.Show("O campo Quantidade de Paginas é de preenchimento obrigatório.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TxtQtdPaginas.Focus();
+                return false;
+            }
+            //
+            if (TxtDescricao.Text.Trim() == "")
+            {
+                MessageBox.Show("O campo Descrição é de preenchimento obrigatório.", ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TxtDescricao.Focus();
+                return false;
+            }
+            //
 
             return true;
         }
 
         private void LimpaControles()
         {
-            TxtCodigo.Text = "";
             TxtNome.Text = "";
+            TxtEdicao.Text = "";
+            TxtISBN.Text = "";
+            TxtQtdPaginas.Text = "";
+            TxtDescricao.Text = "";
+
         }
 
         private void BtnSalvar_Click(object sender, EventArgs e)
@@ -98,7 +117,11 @@ namespace Sistema_Biblioteca.Windows
                     Livro oLivro = new Livro
                     {
                         //id = int.Parse(TxtCodigo.Text),
-                        Nome = TxtNome.Text
+                        Nome = TxtNome.Text,
+                        Edicao = TxtEdicao.Text,
+                        ISBN = TxtISBN.Text,
+                        QtdPaginas = TxtQtdPaginas.Text,
+                        Descricao = TxtDescricao.Text,
                     };
 
                     try
@@ -115,7 +138,7 @@ namespace Sistema_Biblioteca.Windows
                 }
                 else
                 {
-                    
+
                     Livro oLivro = new Livro
                     {
                         id = int.Parse(TxtCodigo.Text),
@@ -123,7 +146,7 @@ namespace Sistema_Biblioteca.Windows
                     };
                     try
                     {
-                    
+
                         Livro.Alterar(oLivro);
                         CarregaGrid();
                         LimpaControles();
@@ -139,20 +162,6 @@ namespace Sistema_Biblioteca.Windows
 
             }
         }
-        private void GrdItens_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtNome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void GrdItens_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -165,19 +174,68 @@ namespace Sistema_Biblioteca.Windows
                 {
                     TxtCodigo.Text = objSelecionado.id.ToString();
                     TxtNome.Text = objSelecionado.Nome;
-                    TxtCodigo.Enabled = false;
+                    TxtEdicao.Text = objSelecionado.Edicao;
+                    TxtISBN.Text = objSelecionado.ISBN;
+                    TxtQtdPaginas.Text = objSelecionado.QtdPaginas;
+                    TxtDescricao.Text = objSelecionado.Descricao;
                     TxtNome.Focus();
+                    TxtEdicao.Focus();
+                    TxtISBN.Focus();
+                    TxtQtdPaginas.Focus();
+                    TxtDescricao.Focus();
+                    TxtCodigo.Enabled = false;
                     Incluir = false;
                 }
                 else if (GrdItens.Columns[e.ColumnIndex].Name == "BtnExcluir")
                 {
-                    if(MessageBox.Show("Confirme a exclusão.",ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (MessageBox.Show("Confirme a exclusão.", ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         objSelecionado.Excluir();
                         CarregaGrid();
                     }
                 }
             }
+        }
+
+        private void GrdItens_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void TxtNome_TextChanged(object sender, EventArgs e)
+        {
+            //
+        }
+
+
+        private void TxtEdicao_TextChanged_1(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void TxtDescricao_TextChanged(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void TxtISBN_TextChanged(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void TxtQtdPaginas_TextChanged(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void TxtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
